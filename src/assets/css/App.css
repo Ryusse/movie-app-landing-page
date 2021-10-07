@@ -1,0 +1,212 @@
+
+:root{
+    --source-code-pro: 'Source Code Pro', monospace;
+    --source-sans-pro: 'Source Sans Pro', sans-serif;
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --soft-red: rgb(221, 69, 42);
+    --soft-red-cta: rgb(175, 49, 26);
+    --gray: rgb(179, 179, 179);
+    --fs-h1: clamp(3.5rem , 6vw + 1rem , 20rem);
+    --fs-h2: clamp(2.9rem , 5vw  + 1rem , 18rem);
+    --fs-h3: clamp(1.5rem , 1vw + 1rem , 8rem);
+    --fs-card-title: clamp(1.5rem , 0.8vw + 1rem ,7rem);
+    --fs-text: clamp(1rem , 0.6vw + 1rem ,5rem);
+    --fs-button: clamp(1rem , 0.4vw + 1rem ,5rem);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: var(--source-sans-pro);
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1,h2,h3,h4{
+    color: var(--white);
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+}
+
+h2{
+    font-size: var(--fs-h2);
+    text-align: start;
+}
+
+h3{
+    font-family: var(--source-code-pro);
+    font-size: var(--fs-h3);
+    color: var(--soft-red);
+    text-align: start;
+    font-weight: 600;
+}
+
+.button{
+    font-size: var(--fs-button);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0.6rem 2rem;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.App{
+    background-color: var(--black);
+}
+
+
+/*HEADER*/
+.header{
+    background: linear-gradient(179deg,rgba(0,0,0,0) 0%,#000000 100%),url('../images/hero-image.jpg') no-repeat top;
+    height: 100VH;
+    padding: 0 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.intro{
+    margin: auto;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+.intro__text{
+    font-size: var(--fs-text);
+}
+
+.button--cta{
+    margin-top: 3rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--soft-red);
+    font-weight: 600;
+}
+
+.button--cta:hover{
+    background-color: var(--soft-red-cta);
+}
+
+/*HEADER END*/
+
+/*CONTENT*/
+
+.layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: "section";
+}
+
+.section{
+    grid-area: section;
+}
+
+.section__h2{
+    padding: 0 0.8rem;
+    margin-bottom: 5rem;
+}
+
+.section__h3{
+    padding: 0 0.8rem;
+}
+
+.section__h2--light{
+    font-weight: 300;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr));
+    grid-template-rows: auto;
+    gap: 5rem 3rem;
+}
+
+.card{
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 6rem auto auto;
+    place-items: center;
+    gap: 0.6rem;
+    grid-template-areas: 
+        "image"
+        "title"
+        "date"
+        "button";
+}
+
+.card__img{
+    grid-area: image;
+    width: 100%;
+    height: auto;
+}
+
+.card__title{
+    grid-area: title;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: var(--fs-card-title);
+} 
+
+.card__date{
+    grid-area: date;
+    font-size: var(--fs-text);
+    color: var(--gray);
+}
+
+.button--light{
+    grid-area: button;
+    border: 1px solid var(--soft-red);
+}
+
+.button--light:hover{
+    background-color: var(--soft-red);
+}
+
+/*CONTENT END*/
+
+/*QUERY*/
+
+@media (min-width: 700px) {
+
+    body{
+        text-align: start;
+    }
+
+    .header{
+        height: 45rem;
+    }
+
+    .layout {
+        grid-template-columns: 7vw 1fr 7vw;
+        grid-template-areas: ". section .";
+    }
+
+    .section__h2,
+    .section__h3{
+        padding: 0;
+    }
+
+    .intro,
+    .card{
+        place-items: center start;
+    }
+
+    
+  }
