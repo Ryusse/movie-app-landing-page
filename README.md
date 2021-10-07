@@ -6,7 +6,7 @@
 
 ### **Links**
 
-- Solution URL: [Demo](https://order-sumary-card-component.netlify.app/)
+- Solution URL: [Demo](https://movie-app-landing-page.netlify.app/)
 
 ### **Built with**
 
