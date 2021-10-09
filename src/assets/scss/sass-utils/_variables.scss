@@ -1,0 +1,31 @@
+:root {
+  --source-code-pro: "Source Code Pro", monospace;
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --soft-red: rgb(221, 69, 42);
+  --soft-red-cta: rgb(175, 49, 26);
+  --gray: rgb(179, 179, 179);
+  --gray-light: rgba(218, 218, 218, 0.37);
+  --fs-h1: clamp(3.5rem, 6vw + 1rem, 20rem);
+  --fs-h2: clamp(2.9rem, 5vw + 1rem, 18rem);
+  --fs-h3: clamp(1.5rem, 1vw + 1rem, 8rem);
+  --fs-card-title: clamp(1.5rem, 0.8vw + 1rem, 7rem);
+  --fs-text: clamp(1rem, 0.6vw + 1rem, 5rem);
+  --fs-button: clamp(1rem, 0.4vw + 1rem, 5rem);
+}
+
+//Maps
+$breakpoints: (
+  xs: 25em,
+  // 400px
+  ms: 34em,
+  // 544px
+  md: 48em,
+  // 768px
+  lg: 60em,
+  // 960px
+  xl: 80em,
+  // 1280px
+  xxl: 90em // 1440px,,
+);

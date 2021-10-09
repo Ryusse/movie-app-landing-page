@@ -1,0 +1,18 @@
+@use '../sass-utils/all' as *;
+
+ #root{
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: 4vw auto 4vw;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header header header"
+               "  .    section   .  ";
+  }
+
+  .header{
+    grid-area: header;
+  }
+
+  .section{
+    grid-area: section;
+  }

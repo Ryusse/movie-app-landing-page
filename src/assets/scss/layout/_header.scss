@@ -1,0 +1,33 @@
+@use "../sass-utils/all" as *;
+
+/*background image and others properties are on the header component jsx*/
+.header {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3vw 1fr 3vw;
+  grid-template-rows: auto 1fr;
+  place-items: center;
+  grid-template-areas:
+    ". navbar."
+    ".  intro .";
+
+  @include query(md) {
+    grid-template-columns: 4vw 5vw 1fr 5vw 4vw;
+    grid-template-areas:
+      ".  navbar   navbar  navbar  ."
+      ".    .       intro    .     .";
+  }
+}
+
+.intro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  place-items: start center;
+  gap: 0.8rem;
+
+  &__content {
+    font-size: var(--fs-text);
+  }
+}

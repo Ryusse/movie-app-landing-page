@@ -1,0 +1,31 @@
+@use "../sass-utils/variables" as *;
+
+.button {
+  font-size: var(--fs-button);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0.6rem 2rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button--cta {
+  margin-top: 3rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--soft-red);
+  font-weight: 600;
+}
+
+.button--cta:hover {
+  background-color: var(--soft-red-cta);
+}
+
+.button--light {
+  grid-area: button;
+  border: 1px solid var(--soft-red);
+}
+
+.button--light:hover {
+  background-color: var(--soft-red);
+}
