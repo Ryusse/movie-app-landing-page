@@ -1,0 +1,53 @@
+
+@use '../sass-utils/all' as *;
+
+.toggle{
+    z-index: 3;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: blue;
+    @include query(md){
+        display: none;
+    }
+    
+    &.open{
+        background-color: RED;
+    }
+
+
+    &__line{
+        transition: all 0.4s ease-in-out;
+        background-color: var(--white);
+        height: 2px;
+    }
+
+    &__line-1{
+        width: 25px;
+        &.open{
+            width: 100%;
+            position: absolute;
+            transform: rotate(135deg) rotateY(180deg);
+        }
+    }
+
+    &__line-2{
+        width: 20px;
+        &.open{
+            transform: scaleX(0);
+        }
+    }
+
+    &__line-3{
+        width: 15px;
+        &.open{
+            width: 100%;
+            position: absolute;
+            transform: rotate(-135deg);
+        }
+
+    }
+}
