@@ -1,12 +1,16 @@
 import React from "react";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import MoviesList from "../components/MoviesList";
+import Navbar from "../components/Navbar";
+import Search from "../components/Search";
 
 const Movies = () => {
   return (
     <React.Fragment>
-      <Header />
+      <Navbar/>
+      <Hero />
       <section className="section">
+        <Search/>
         <h2>All Movies</h2>
         <MoviesList />
       </section>
