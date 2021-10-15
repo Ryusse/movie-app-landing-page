@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { get } from "../utils/httpClient";
 import { useParams } from "react-router";
 
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import Spinner from "../components/Spinner";
 
 const MovieDetails = () => {
@@ -29,7 +29,7 @@ const MovieDetails = () => {
   const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.backdrop_path;
   return (
     <React.Fragment>
-      <Header 
+      <Hero 
         title = {movie.title}
         content = {movie.overview} 
         image = {imageUrl} 
