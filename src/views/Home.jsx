@@ -1,11 +1,14 @@
 import React from "react";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Search from "../components/Search";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <Header
-        title="Welcome to maini teather"
+      <Navbar/>
+      <Hero
+        title="Watch movie anytime, everywhere."
         content="Lorem ipsum dolor sit amet, consectetur adip"
       />
       <section className="section">
@@ -13,6 +16,7 @@ const Home = () => {
         <h2 className="section__h2">
           Now <span className="section__h2--light">Showing</span>
         </h2>
+        <Search/>
       </section>
     </React.Fragment>
   );
