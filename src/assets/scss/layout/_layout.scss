@@ -3,14 +3,20 @@
  #root{
     background-color: var(--black);
     display: grid;
-    grid-template-columns: 4vw auto 4vw;
+    grid-template-columns: 5vw auto 5vw;
     grid-template-rows: auto auto;
-    grid-template-areas: "header header header"
-               "  .    section   .  ";
+    grid-template-areas: 
+          ".  navbar ."
+          ".   hero  ."
+          ". section .";
   }
 
-  .header{
-    grid-area: header;
+  .navbar{
+    grid-area: navbar;
+  }
+
+  .hero{
+    grid-area: hero;
   }
 
   .section{
