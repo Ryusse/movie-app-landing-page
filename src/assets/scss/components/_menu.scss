@@ -1,0 +1,29 @@
+
+@use '../sass-utils/all' as *;
+
+.menu{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 6.5rem;
+    left: 0;
+    right: 0;
+    height: auto;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    &__list {
+        display: grid;
+        place-items:center;
+        padding: 1rem ;
+        gap: 3rem;
+    }
+
+    &__link{
+        color: var(--white);
+    }
+
+    @include query(md){
+        display: none;
+    }
+    
+}
