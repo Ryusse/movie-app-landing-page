@@ -3,27 +3,41 @@
 
 .menu{
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 6.5rem;
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: 4.5rem;
+    bottom: 0;
     left: 0;
-    right: 0;
-    height: auto;
-    transition: all .3s ease-in-out;
-    opacity: 1;
+    width: 100%;
+    transform: translate3d(-100%, 0, 0);
+    transition: all .4s ease-in-out;
+    
+    @include query(md) {
+        width: 18rem;
+    }
+
+    &.open{
+       transform: translate3d(0, 0, 0);
+    }
     &__list {
-        display: grid;
-        place-items:center;
-        padding: 1rem ;
-        gap: 3rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 3rem 5vw;
+        gap: 2rem;
+        border-top: 0.2rem solid var(--red);
     }
 
     &__link{
         color: var(--white);
-    }
+        text-transform: uppercase;
+        transition: all .4s ease-in-out;
 
-    @include query(md){
-        display: none;
+        &:hover,
+        &:focus{
+            color: var(--red);
+        }
     }
     
 }

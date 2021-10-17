@@ -2,39 +2,20 @@
 
 .navbar {
   grid-area: navbar;
-  padding: 2rem 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   place-items: center;
-
-  &__logo {
-    color: var(--white);
-    z-index: 2;
-  }
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   width: 100vw;
-  //   height: 0.5px;
-  //   background-color: var(--gray-light);
-  // }
-
-  &__list {
-    display: none;
-
-    @include query(md) {
-      display: flex;
-      column-gap: 5rem;
-      color: var(--white);
-    }
-  }
-
+  width: 100%;
+  background-color: var(--dark-blue);
+  
   &__item {
-    display: flex;
+    display: grid;
     place-items: center;
-    column-gap: 0.6rem;
+    //menu is in second place
+
+    &:nth-child(6) {  
+      display: none
+    }
   }
 
   &__link {

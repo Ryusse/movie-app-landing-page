@@ -1,53 +1,46 @@
+@use "../sass-utils/all" as *;
 
-@use '../sass-utils/all' as *;
+.toggle {
+  z-index: 3;
+  cursor: pointer;
+  display: grid;
+  gap: 0.5rem;
+  position: relative;
 
-.toggle{
-    z-index: 3;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: grid;
-    place-items: center;
-    position: relative;
-    background-color: blue;
-    @include query(md){
-        display: none;
+  &.open,
+  &:hover{
+    & div{
+      background-color: var(--red);
     }
-    
-    &.open{
-        background-color: RED;
+  }
+
+  & div {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+    width: 1.5rem;
+    height: 1.8px;
+  }
+
+  & div:nth-child(1) {
+    &.open {
+      position: absolute;
+      width: 100%;
+      transform: rotate(45deg);
     }
+  }
 
-
-    &__line{
-        transition: all 0.4s ease-in-out;
-        background-color: var(--white);
-        height: 2px;
+  & div:nth-child(2) {
+    &.open {
+      opacity: 0;
     }
+  }
 
-    &__line-1{
-        width: 25px;
-        &.open{
-            width: 100%;
-            position: absolute;
-            transform: rotate(135deg) rotateY(180deg);
-        }
+  & div:nth-child(3) {
+    width: 14px;
+    &.open {
+      position: absolute;
+      width: 100%;
+      transform: rotate(-45deg);
     }
-
-    &__line-2{
-        width: 20px;
-        &.open{
-            transform: scaleX(0);
-        }
-    }
-
-    &__line-3{
-        width: 15px;
-        &.open{
-            width: 100%;
-            position: absolute;
-            transform: rotate(-135deg);
-        }
-
-    }
+  }
 }
