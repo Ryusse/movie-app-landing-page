@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as   Switch, Route ,Link } from "react-router-dom";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
-    <div className="menu">
-      <ul className="menu__list open">
+    <div className={`menu ${props.open ? "open" : ""}`}>
+      <ul className="menu__list">
         <li className="menu__item">
           <Link className="menu__link" to="/">
             Home
