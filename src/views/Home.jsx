@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import Search from "../components/Search";
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
         <h2 className="section__h2">
           Now <span className="section__h2--light">Showing</span>
         </h2>
-        <Search/>
       </section>
     </React.Fragment>
   );
