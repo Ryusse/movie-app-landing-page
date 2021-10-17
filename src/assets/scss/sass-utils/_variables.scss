@@ -1,14 +1,14 @@
 :root {
   --source-code-pro: "Source Code Pro", monospace;
   --source-sans-pro: "Source Sans Pro", sans-serif;
-  --black: rgb(0, 0, 0);
-  --white: rgb(255, 255, 255);
-  --soft-red: rgb(221, 69, 42);
-  --soft-red-cta: rgb(175, 49, 26);
-  --gray: rgb(179, 179, 179);
-  --gray-light: rgba(218, 218, 218, 0.37);
-  --fs-h1: clamp(3.5rem, 6vw + 1rem, 20rem);
-  --fs-h2: clamp(2.9rem, 5vw + 1rem, 18rem);
+
+  --red: 	hsl(343, 100%, 43%);
+  --white:hsl(0, 0%, 100%);
+  --dark-blue: hsl(210, 91%, 4%);
+  --gray-light: hsl(211, 17%, 72%);
+
+  --fs-h1: clamp(2.5rem, 3.6vw + 1rem, 20rem);
+  --fs-h2: clamp(1.5rem, 2vw + 1rem, 14rem);
   --fs-h3: clamp(1.5rem, 1vw + 1rem, 8rem);
   --fs-card-title: clamp(1.5rem, 0.8vw + 1rem, 7rem);
   --fs-text: clamp(1rem, 0.6vw + 1rem, 5rem);
@@ -27,5 +27,6 @@ $breakpoints: (
   // 960px
   xl: 80em,
   // 1280px
-  xxl: 90em // 1440px,,
+  xxl: 90em 
+  // 1440px,,
 );
