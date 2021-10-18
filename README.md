@@ -2,7 +2,6 @@
 ### **Screenshot**
 
 ![](./screenshots/screenshot-dektop.jpg)
-aa
 
 ### **Links**
 
