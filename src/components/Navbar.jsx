@@ -6,7 +6,7 @@ import Button from "./Button";
 import Search from "./Search";
 import SearchContainer from "./SearchContainer";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -34,7 +34,6 @@ const Navbar = () => {
       <div className="navbar__item" onClick={handleToggleSearch}>
         <Search />
       </div>
-
       <SearchContainer open={searchOpen}/>
 
       <div className="navbar__item">
