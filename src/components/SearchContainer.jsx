@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { useQuery } from "../hooks/useQuery";
+import ExitButton from "./ExitButton";
 import Search from "./Search";
 
 export default function SearchContainer(props) {
@@ -9,6 +10,7 @@ export default function SearchContainer(props) {
   const history = useHistory();
   const query = useQuery();
   const search = query.get("search");
+  const closeSearch = false;
 
   useEffect(() => {
     setSearchText(search || "");
@@ -28,8 +30,10 @@ export default function SearchContainer(props) {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Search className="search-container__button"/>
+          <Search className="search-container__search-button"/>
         </div>
+
+        <ExitButton className="search-container__exit-button" />
       </form>
   );
 }
