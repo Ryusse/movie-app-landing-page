@@ -14,42 +14,6 @@ button {
   border: none;
 }
 
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: var(--source-sans-pro);
-  line-height: 1.6;
-  text-align: start;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--white);
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: var(--fs-h1);
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: var(--fs-h2);
-  text-align: start;
-}
-
-h3 {
-  font-family: var(--source-code-pro);
-  font-size: var(--fs-h3);
-  color: var(--soft-red);
-  text-align: start;
-  font-weight: 600;
-}
-
 ul {
   list-style: none;
 }
@@ -61,8 +25,4 @@ image {
 
 a {
   text-decoration: none;
-}
-
-p {
-  color: var(--gray);
 }

@@ -1,11 +1,17 @@
 :root {
-  --source-code-pro: "Source Code Pro", monospace;
-  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --dosis: 'Dosis', sans-serif;
+  --nunito: 'Nunito', sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
 
   --red: 	hsl(343, 100%, 43%);
   --white:hsl(0, 0%, 100%);
   --dark-blue: hsl(210, 91%, 4%);
-  --gray-blue: 	hsl(210, 10%, 16%);
+  --gray-blue: 	hsl(210, 9%, 13%);
   
   --gray-light: hsl(211, 17%, 72%);
 

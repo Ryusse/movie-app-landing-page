@@ -1,1 +1,45 @@
-@use '../sass-utils/all' as *;
+@use "../sass-utils/all" as *;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--nunito);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  text-align: start;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--dosis);
+  font-size: var(--source-sans-pro);
+  color: var(--white);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+  font-weight: var(--fw-extra-bold);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  text-align: start;
+}
+
+h3 {
+  font-family: var(--source-code-pro);
+  font-size: var(--fs-h3);
+  color: var(--soft-red);
+  text-align: start;
+  font-weight: 600;
+}
+
+p {
+  color: var(--gray);
+}

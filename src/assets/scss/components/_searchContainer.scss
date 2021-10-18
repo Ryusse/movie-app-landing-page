@@ -6,11 +6,13 @@
   top: 0;
   left: 5vw;
   right: 5vw;
+  display: flex;
+  place-items: center;
   padding: 0.75rem 0;
   transition: all 0.3s ease-in-out;
   transform: translate3d(0, -100%, 0);
   background-color: var(--dark-blue);
-//   background-color: rgb(155, 216, 64);
+  //   background-color: rgb(155, 216, 64);
 
   &.open {
     transform: translate3d(0, 0, 0);
@@ -18,6 +20,7 @@
 
   &__box {
     display: flex;
+    width: 90%;
     place-items: center;
     padding: 0.9rem 1.5rem;
     background-color: var(--gray-blue);
@@ -29,8 +32,38 @@
     color: var(--white);
   }
 
-  &__button {
-      display: flex;
-      place-items: center;
+  &__search-button {
+    display: flex;
+    place-items: center;
+  }
+
+  &__exit-button {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      & div {
+        background-color: var(--red);
+      }
+    }
+
+    & div {
+      width: 70%;
+      height: 2px;
+      position: absolute;
+      background-color: var(--white);
+      transition: all 0.3s ease-in-out;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
