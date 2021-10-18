@@ -28,7 +28,7 @@ export default function SearchContainer(props) {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Search className="search-contianer__button"/>
+          <Search className="search-container__button"/>
         </div>
       </form>
   );
