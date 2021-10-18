@@ -10,7 +10,6 @@ const Movies = () => {
       <Navbar/>
       <Hero />
       <section className="section">
-        <Search/>
         <h2>All Movies</h2>
         <MoviesList />
       </section>
