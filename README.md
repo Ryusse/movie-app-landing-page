@@ -1,8 +1,8 @@
 
 ### **Screenshot**
 
-![](./screenshots/desktop.png)
-
+![](./screenshots/screenshot-dektop.jpg)
+aa
 
 ### **Links**
 
@@ -14,4 +14,3 @@
 - CSS custom properties
 - CSS Grid
 - Mobile-first workflow
-
