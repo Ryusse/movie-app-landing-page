@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 
 import Hero from "../components/Hero";
 import Spinner from "../components/Spinner";
+import Navbar from "../components/Navbar";
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -29,12 +30,10 @@ const MovieDetails = () => {
   const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.backdrop_path;
   return (
     <React.Fragment>
-      <Hero 
-        title = {movie.title}
-        content = {movie.overview} 
-        image = {imageUrl} 
-        genres = {movie.genres.map((genre) => genre.name).join(" , ")}
-      />
+      <Navbar/>
+      <main className="content">
+        <h2>Movie details ...</h2>
+      </main>
     </React.Fragment>
   );
 };

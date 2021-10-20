@@ -3,19 +3,16 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
+
   return (
     <React.Fragment>
-      <Navbar/>
-      <Hero
-        title="Watch movie anytime, everywhere."
-        content="Lorem ipsum dolor sit amet, consectetur adip"
-      />
-      <section className="section">
-        <h3 className="section__h3">Featured</h3>
-        <h2 className="section__h2">
-          Now <span className="section__h2--light">Showing</span>
+      <Navbar />
+      <Hero/>
+      <main className="content">
+        <h2 className="content__h2">
+          TRENDS NOW
         </h2>
-      </section>
+      </main>
     </React.Fragment>
   );
 };

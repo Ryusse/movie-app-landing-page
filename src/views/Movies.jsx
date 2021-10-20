@@ -8,8 +8,7 @@ const Movies = () => {
   return (
     <React.Fragment>
       <Navbar/>
-      <Hero />
-      <section className="section">
+      <section className="content">
         <h2>All Movies</h2>
         <MoviesList />
       </section>

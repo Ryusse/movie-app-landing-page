@@ -31,14 +31,13 @@ const Navbar = (props) => {
         </Link>
       </div>
 
-      <div className="navbar__item" onClick={handleToggleSearch}>
-        <Search />
+      <div className="navbar__item">
+        <Search className="search-icon" onClick={handleToggleSearch}/>
+
+        <Button className="button--sign-up" content="Sign up" />
       </div>
       <SearchContainer open={searchOpen}/>
 
-      <div className="navbar__item">
-        <Button className="button--sign-up" content="Sign up" />
-      </div>
 
     </nav>
   );
