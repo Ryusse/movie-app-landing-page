@@ -38,7 +38,11 @@
   }
 
   & div:nth-child(3) {
+    width: 14px;
+    justify-self: start;
     &.open {
+      top: 0.6rem;
+      width: 100%;
       position: absolute;
       transform: rotate(-45deg);
     }

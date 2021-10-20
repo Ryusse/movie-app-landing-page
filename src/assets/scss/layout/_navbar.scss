@@ -1,9 +1,8 @@
 @use "../sass-utils/all" as *;
 
 .navbar {
-  grid-area: navbar;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   place-items: center;
   width: 100%;
   background-color: var(--dark-blue);
@@ -11,11 +10,27 @@
   &__item {
     display: grid;
     place-items: center;
-    //menu is in second place
 
-    &:nth-child(6) {  
-      
+    &:nth-child(1) {  
+      justify-self: start;
     }
+
+    &:nth-child(3) {
+      justify-self: center;
+    }
+
+    &:nth-child(4) {  
+      justify-self: end;
+      display: flex;
+      gap: 2rem;
+
+      a{
+        display: none;
+        @include query(md){
+          display: block;
+        }
+      }
+    }    
   }
 
   &__link {

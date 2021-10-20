@@ -1,0 +1,9 @@
+
+@use '../sass-utils/all' as *;
+
+.hero{
+    padding: 0 5vw;
+    height: 38.5rem;
+    display: grid;
+    position: relative;
+}

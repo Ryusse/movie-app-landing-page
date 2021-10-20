@@ -1,24 +1,24 @@
 @use '../sass-utils/all' as *;
 
- #root{
-    background-color: var(--dark-blue);
-    display: grid;
-    grid-template-columns: 5vw auto 5vw;
-    grid-template-rows: 4.5rem auto;
-    grid-template-areas: 
-          ".  navbar ."
-          ".   hero  ."
-          ". section .";
-  }
+#root{
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 5vw auto 5vw;
+  grid-template-rows: 4.5rem auto;
+  grid-template-areas: 
+        ".  navbar ."
+        "hero   hero  hero"
+        ".  content. ";
+}
 
-  .navbar{
-    grid-area: navbar;
-  }
+.navbar{
+  grid-area: navbar;
+}
 
-  .hero{
-    grid-area: hero;
-  }
+.hero{
+  grid-area: hero;
+}
 
-  .section{
-    grid-area: section;
-  }
+.content{
+    grid-area: content;
+}
