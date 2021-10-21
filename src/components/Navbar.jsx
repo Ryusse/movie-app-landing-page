@@ -1,46 +1,52 @@
-import { useState } from "react";
-import { BrowserRouter as Switch, Route, Link } from "react-router-dom";
-import Menu from "./Menu";
-import Toggle from "./Toggle";
-import Button from "./Button";
-import Search from "./Search";
-import SearchContainer from "./SearchContainer";
+import { useState } from 'react';
+import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
+import Menu from './Menu';
+import Toggle from './Toggle';
+import Button from './Button';
+import Search from './Search';
+import SearchContainer from './SearchContainer';
 
-const Navbar = (props) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+const Navbar = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [searchOpen, setSearchOpen] = useState(false);
 
-  const handleToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
+	const handleToggle = () => {
+		function toggleMenu(prevMenuOpen) {
+			return !prevMenuOpen;
+		}
 
-  const handleToggleSearch = () => {
-    setSearchOpen(!searchOpen);
-  }
+		setMenuOpen(toggleMenu);
+	};
 
-  return (
-    <nav className="navbar">
-      <div className="navbar__item" onClick={handleToggle}>
-        <Toggle open={menuOpen} />
-      </div>
-      <Menu open={menuOpen} />
+	const handleToggleSearch = () => {
+		setSearchOpen(!searchOpen);
+	};
 
-      <div className="navbar__item">
-        <Link className="navbar__link" to="/">
-          <div className="logo">LOGO</div>
-        </Link>
-      </div>
+	const closeSearch = () => {
+		setSearchOpen(false);
+	};
 
-      <div className="navbar__item">
-        <Search className="search-icon" onClick={handleToggleSearch}/>
+	return (
+		<nav className='navbar'>
+			<div className='navbar__item' onClick={handleToggle}>
+				<Toggle open={menuOpen} />
+			</div>
+			<Menu open={menuOpen} />
 
-        <Button className="button--sign-up" content="Sign up" />
-      </div>
-      <SearchContainer open={searchOpen}/>
+			<div className='navbar__item'>
+				<Link className='navbar__link' to='/'>
+					<div className='logo'>LOGO</div>
+				</Link>
+			</div>
 
+			<div className='navbar__item'>
+				<Search className={'search-icon'} open={handleToggleSearch} />
 
-    </nav>
-  );
+				<Button className='button--sign-up' content='Sign up' />
+			</div>
+			{searchOpen && <SearchContainer close={closeSearch} open={'open'} />}
+		</nav>
+	);
 };
 
 export default Navbar;
