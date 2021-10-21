@@ -41,6 +41,10 @@ h3 {
 }
 
 p {
-  color: var(--white);
+  color: var(--gray-light);
   font-size: var(--fs-text);
+}
+
+.fs-small{
+  font-size: var(--fs-small);
 }
