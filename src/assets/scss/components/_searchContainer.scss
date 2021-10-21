@@ -23,9 +23,18 @@
     display: flex;
     width: 90%;
     place-items: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.2rem ;
     background-color: var(--gray-blue);
     border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+
+    &:focus{
+      border: 1px solid var(--red);      
+    }
+    &:hover{
+      border: 1px solid var(--red);
+    }
   }
 
   &__input {
@@ -45,7 +54,8 @@
     display: grid;
     place-items: center;
 
-    &:hover {
+    &:hover,
+    &:focus{
       & div {
         background-color: var(--red);
       }
