@@ -3,7 +3,7 @@
 export default function Search(props) {
 
   return (
-    <div className={`${props.className}`}>
+    <button className={`${props.className}`} onClick={props.open}>
       <svg
         width="18"
         height="18"
@@ -16,6 +16,7 @@ export default function Search(props) {
           fill="white"
         />
       </svg>
-    </div>
+
+    </button>
   );
 }
