@@ -17,22 +17,18 @@ export default function Slider(movie) {
         navigation={true}
         className="swiper"
       >
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          data-swiper-parallax="-23%"
-        ></div>
 
-        <SwiperSlide>
+        <SwiperSlide className="swiper__slide">
           <div className="container">
-            <div className="container__content">
-              <h1>Movie</h1>
-              <div className="container__header">
-                <div className="container__rating">
+            <div className="content">
+              <h1 className="content__title">Godzilla</h1>
+
+              <div className="row">
+                <div className="row__rating">
                   <svg
-                    className="container__rating-star"
-                    width="16"
-                    height="15"
+                    className="row__rating-star"
+                    width="17"
+                    height="16"
                     viewBox="0 0 16 15"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -42,15 +38,15 @@ export default function Slider(movie) {
                       fill="#FAC917"
                     />
                   </svg>
-                  <p className="container__rating-number">9/10</p>
+                  <p className="row__rating-number fs-small">9/10</p>
                 </div>
-                <div className="container__categories">
-                  <p>Action</p>
-                  <p>Adventure</p>
+                <div className="row__categories">
+                  <p className="row__categorie fs-small">Action</p>
+                  <p className="row__categorie fs-small">Adventure</p>
                 </div>
               </div>
 
-              <p className="container__overview">
+              <p className="content__overview">
                 Lorem ipsum dolor sit amet consectetur adipiscing, elit libero
                 eget et mollis hendrerit donec, sed eros odio lectus sagittis.
                 Integer nam lacus semper sagittis inceptos massa magnis
@@ -60,21 +56,85 @@ export default function Slider(movie) {
 
             <img  className="container__image"src={ImageHero} alt="" />
           </div>
+        </SwiperSlide>
 
-          <div className="text" data-swiper-parallax="-100">
-            <p>Swiper three</p>
+        <SwiperSlide className="swiper__slide">
+          <div className="container">
+            <div className="content">
+              <h1 className="content__title">Godzilla</h1>
+
+              <div className="row">
+                <div className="row__rating">
+                  <svg
+                    className="row__rating-star"
+                    width="17"
+                    height="16"
+                    viewBox="0 0 16 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.99998 0L10.4718 4.93769L16 5.72945L12 9.57289L12.944 15L7.99998 12.4377L3.05569 15L4.00001 9.57289L0 5.72945L5.52783 4.93769L7.99998 0Z"
+                      fill="#FAC917"
+                    />
+                  </svg>
+                  <p className="row__rating-number fs-small">9/10</p>
+                </div>
+                <div className="row__categories">
+                  <p className="row__categorie fs-small">Action</p>
+                  <p className="row__categorie fs-small">Adventure</p>
+                </div>
+              </div>
+
+              <p className="content__overview">
+                Lorem ipsum dolor sit amet consectetur adipiscing, elit libero
+                eget et mollis hendrerit donec, sed eros odio lectus sagittis.
+                Integer nam lacus semper sagittis inceptos massa magnis
+                hendrerit,
+              </p>
+            </div>
+
+            <img  className="container__image"src={ImageHero} alt="" />
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 2
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>Swiper two</p>
+        <SwiperSlide className="swiper__slide">
+          <div className="container">
+            <div className="content">
+              <h1 className="content__title">Godzilla</h1>
+
+              <div className="row">
+                <div className="row__rating">
+                  <svg
+                    className="row__rating-star"
+                    width="17"
+                    height="16"
+                    viewBox="0 0 16 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.99998 0L10.4718 4.93769L16 5.72945L12 9.57289L12.944 15L7.99998 12.4377L3.05569 15L4.00001 9.57289L0 5.72945L5.52783 4.93769L7.99998 0Z"
+                      fill="#FAC917"
+                    />
+                  </svg>
+                  <p className="row__rating-number fs-small">9/10</p>
+                </div>
+                <div className="row__categories">
+                  <p className="row__categorie fs-small">Action</p>
+                  <p className="row__categorie fs-small">Adventure</p>
+                </div>
+              </div>
+
+              <p className="content__overview">
+                Lorem ipsum dolor sit amet consectetur adipiscing, elit libero
+                eget et mollis hendrerit donec, sed eros odio lectus sagittis.
+                Integer nam lacus semper sagittis inceptos massa magnis
+                hendrerit,
+              </p>
+            </div>
+
+            <img  className="container__image"src={ImageHero} alt="" />
           </div>
         </SwiperSlide>
       </Swiper>
