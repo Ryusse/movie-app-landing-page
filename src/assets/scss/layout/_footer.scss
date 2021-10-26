@@ -13,11 +13,12 @@
 
 	&__container {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 1fr 0.5fr;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 		gap: 3rem;
 		@include query(md) {
-			flex-direction: row;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 1fr 0.5fr;
 		}
 	}
 
@@ -36,8 +37,10 @@
 		}
 
 		&:nth-child(5) {
-			grid-column: 2/4;
 			text-align: center;
+			@include query(md) {
+				grid-column: 2/4;
+			}
 		}
 	}
 }
