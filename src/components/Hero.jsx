@@ -1,7 +1,7 @@
 import Slider from './Slider';
 import HeroBackground from '../assets/images/background/heroBackground.jpg';
 
-export default Hero = () => {
+export default function Hero() {
 	return (
 		<div
 			className='hero'
@@ -15,4 +15,4 @@ export default Hero = () => {
 			<Slider />
 		</div>
 	);
-};
+}

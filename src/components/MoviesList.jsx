@@ -4,7 +4,7 @@ import { get } from '../utils/httpClient';
 import Spinner from './Spinner';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-export default Movieslist = ({ search }) => {
+export default function Movieslist({ search }) {
 	const [movies, setMovies] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [page, setPage] = useState(1);
@@ -35,4 +35,4 @@ export default Movieslist = ({ search }) => {
 			</ul>
 		</InfiniteScroll>
 	);
-};
+}

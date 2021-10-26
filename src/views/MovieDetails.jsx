@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-export default function MovieDetails () {
+export default function MovieDetails() {
 	const { movieId } = useParams();
 	const [movie, setMovie] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +37,4 @@ export default function MovieDetails () {
 			<Footer />
 		</React.Fragment>
 	);
-};
-
-export default MovieDetails;
+}

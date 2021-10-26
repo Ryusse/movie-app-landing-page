@@ -6,7 +6,7 @@ import Button from './Button';
 import Search from './Search';
 import SearchContainer from './SearchContainer';
 
-export default Navbar = () => {
+export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [searchOpen, setSearchOpen] = useState(false);
 
@@ -47,4 +47,4 @@ export default Navbar = () => {
 			{searchOpen && <SearchContainer close={closeSearch} open={'open'} />}
 		</nav>
 	);
-};
+}

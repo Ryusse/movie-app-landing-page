@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import placeholder from '../assets/images/image-not-found.jpg';
 
-export default Moviecard = ({ movie }) => {
+export default function Moviecard({ movie }) {
 	const imageUrl = movie.poster_path
 		? 'https://image.tmdb.org/t/p/w300' + movie.poster_path
 		: placeholder;
@@ -13,4 +13,4 @@ export default Moviecard = ({ movie }) => {
 			<p className='card__date'>{movie.release_date}</p>
 		</Link>
 	);
-};
+}
