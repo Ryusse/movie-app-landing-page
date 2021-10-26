@@ -1,7 +1,15 @@
 @use '../sass-utils/all' as *;
 
 .footer {
-	padding: 5rem 0;
+	padding: 5rem $padding-layout-mobile;
+
+	@include query(md) {
+		padding: 5rem $padding-layout-tablet;
+	}
+
+	@include query(lg) {
+		padding: 5rem $padding-layout-desktop;
+	}
 
 	&__container {
 		display: grid;
