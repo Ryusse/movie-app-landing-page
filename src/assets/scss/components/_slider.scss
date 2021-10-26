@@ -42,7 +42,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 1.3rem;
-			margin-left: $padding-layout-mobile;
+			margin: 0 $padding-layout-mobile;
 			@include query(md) {
 				margin-left: $padding-layout-tablet;
 				max-width: 50%;
@@ -95,7 +95,7 @@
 		&__image {
 			width: 16rem;
 			height: auto;
-			margin-right: $padding-layout-mobile;
+			margin: 0 $padding-layout-mobile;
 			@include query(md) {
 				margin-right: $padding-layout-tablet;
 			}
