@@ -13,33 +13,43 @@
 
 .swiper {
 	display: flex;
-    flex-direction: row;
+	flex-direction: row;
 	width: 100%;
+	padding: 1rem 0;
 
-    &-pagination{
-        justify-content: center;
-        display: flex;
-    }
+	@include query(md) {
+		padding: 3rem 0;
+	}
+
+	&-pagination {
+		justify-content: center;
+		display: flex;
+	}
 
 	.container {
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		gap: 3rem;
+		justify-content: space-between;
+
 		@include query(md) {
 			flex-direction: row;
 		}
 
 		.content {
-			margin: 0 5vw;
 			display: flex;
 			flex-direction: column;
 			gap: 1.3rem;
-
+			margin-left: $padding-layout-mobile;
 			@include query(md) {
-				margin: 0 0 0 5vw;
+				margin-left: $padding-layout-tablet;
+				max-width: 50%;
+			}
+
+			@include query(lg) {
+				margin-left: $padding-layout-desktop;
 			}
 
 			&__title {
@@ -83,11 +93,15 @@
 		}
 
 		&__image {
-			margin: 0 5vw;
-			width: 15rem;
+			width: 16rem;
 			height: auto;
+			margin-right: $padding-layout-mobile;
 			@include query(md) {
-				margin: 0 5vw 0 0;
+				margin-right: $padding-layout-tablet;
+			}
+
+			@include query(lg) {
+				margin-right: $padding-layout-desktop;
 			}
 		}
 	}

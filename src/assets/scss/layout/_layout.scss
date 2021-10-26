@@ -1,24 +1,36 @@
 @use '../sass-utils/all' as *;
 
-#root{
-  background-color: var(--dark-blue);
-  display: grid;
-  grid-template-columns: 5vw auto 5vw;
-  grid-template-rows: 4.5rem auto;
-  grid-template-areas: 
-        ".  navbar ."
-        "hero   hero  hero"
-        ".  content. ";
+#root {
+	background-color: var(--dark-blue);
+	display: grid;
+	grid-template-columns: $padding-layout-mobile auto $padding-layout-mobile;
+	grid-template-rows: 4.5rem 1fr auto auto;
+	grid-template-areas:
+		' navbar  navbar  navbar '
+		'  hero    hero    hero  '
+		'   .     content   .    '
+		'   .      footer   .    ';
+	@include query(md) {
+		grid-template-columns: $padding-layout-tablet auto $padding-layout-tablet;
+	}
+
+	@include query(lg) {
+		grid-template-columns: $padding-layout-desktop auto $padding-layout-desktop;
+	}
 }
 
-.navbar{
-  grid-area: navbar;
+.navbar {
+	grid-area: navbar;
 }
 
-.hero{
-  grid-area: hero;
+.hero {
+	grid-area: hero;
 }
 
-.content{
-    grid-area: content;
+.content {
+	grid-area: content;
+}
+
+.footer {
+	grid-area: footer;
 }

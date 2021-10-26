@@ -1,19 +1,23 @@
 import React from 'react';
-import Hero from '../components/Hero';
 import MoviesList from '../components/MoviesList';
 import Navbar from '../components/Navbar';
-import Search from '../components/Search';
+import { useQuery } from '../hooks/useQuery';
+import { useDebounce } from '../hooks/useDebounce';
+import Footer from '../components/Footer';
 
-const Movies = () => {
-  return (
-    <React.Fragment>
-      <Navbar />
-      <section className="content">
-        <h2>All Movies</h2>
-        <MoviesList />
-      </section>
-    </React.Fragment>
-  );
-};
+export default function Movies() {
+	const query = useQuery();
+	const search = query.get('search');
+	const debouncedSearch = useDebounce(search, 300);
 
-export default Movies;
+	return (
+		<>
+			<Navbar />
+			<main className='content'>
+				<h2>All Movies</h2>
+				<MoviesList key={debouncedSearch} search={debouncedSearch} />
+			</main>
+			<Footer />
+		</>
+	);
+}

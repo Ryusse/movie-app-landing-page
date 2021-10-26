@@ -1,0 +1,35 @@
+@use '../sass-utils/all' as *;
+
+.footer {
+	padding: 5rem 0;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr 0.5fr;
+		gap: 3rem;
+		@include query(md) {
+			flex-direction: row;
+		}
+	}
+
+	h4 {
+		margin-bottom: 0.5rem;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		text-align: center;
+
+		@include query(md) {
+			text-align: start;
+		}
+
+		&:nth-child(5) {
+			grid-column: 2/4;
+			text-align: center;
+		}
+	}
+}

@@ -1,40 +1,38 @@
-import React from "react";
-import { useQuery } from "../hooks/useQuery";
-import Moviecard from "./MovieCard";
-import { useState, useEffect } from "react";
-import { get } from "../utils/httpClient";
-import Spinner from "./Spinner";
+import Moviecard from './MovieCard';
+import { useState, useEffect } from 'react';
+import { get } from '../utils/httpClient';
+import Spinner from './Spinner';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
+export default Movieslist = ({ search }) => {
+	const [movies, setMovies] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+	const [page, setPage] = useState(1);
+	const [hasMore, setHasMore] = useState(true);
 
-const Movieslist = () => {
-  const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+	useEffect(() => {
+		setIsLoading(true);
+		const searchUrl = search
+			? '/search/movie?query=' + search + '&page=' + page
+			: '/discover/movie?page=' + page;
+		get(searchUrl).then((data) => {
+			setMovies((prevMovies) => prevMovies.concat(data.results));
+			setHasMore(data.page < data.total_pages);
+			setIsLoading(false);
+		});
+	}, [search, page]);
 
-  const query = useQuery();
-  const search = query.get("search");
-
-  useEffect(() => {
-    setIsLoading(true);
-    const searchUrl = search
-      ? "/search/movie?query=" + search
-      : "/discover/movie";
-    get(searchUrl).then((data) => {
-      setMovies(data.results);
-      setIsLoading(false);
-    });
-  }, [search]);
-
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  return (
-    <ul className="moviesList">
-      {movies.map((movie) => (
-        <Moviecard key={movie.id} movie={movie} />
-      ))}
-    </ul>
-  );
+	return (
+		<InfiniteScroll
+			dataLength={movies.length}
+			hasMore={hasMore}
+			next={() => setPage((prevPage) => prevPage + 1)}
+			loader={<Spinner />}>
+			<ul className='moviesList'>
+				{movies.map((movie) => (
+					<Moviecard key={movie.id} movie={movie} />
+				))}
+			</ul>
+		</InfiniteScroll>
+	);
 };
-
-export default Movieslist;
