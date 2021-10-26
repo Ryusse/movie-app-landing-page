@@ -9,7 +9,7 @@
 		' navbar  navbar  navbar '
 		'  hero    hero    hero  '
 		'   .     content   .    '
-		'   .      footer   .    ';
+		'   footer     footer   footer    ';
 	@include query(md) {
 		grid-template-columns: $padding-layout-tablet auto $padding-layout-tablet;
 	}
