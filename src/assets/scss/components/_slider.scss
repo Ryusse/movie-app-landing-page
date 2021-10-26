@@ -96,7 +96,7 @@
 		&__image {
 			width: 16rem;
 			height: auto;
-			margin: 0 $padding-layout-mobile;
+			margin: 0 $padding-layout-mobile 5rem $padding-layout-mobile;
 			@include query(md) {
 				margin-right: $padding-layout-tablet;
 			}
