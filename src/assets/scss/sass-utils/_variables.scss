@@ -18,7 +18,7 @@
 	--fs-h1: clamp(2.4rem, 2.8vw + 1rem, 20rem);
 	--fs-h2: clamp(1.5rem, 1.5vw + 1rem, 14rem);
 	--fs-h3: clamp(1.5rem, 1vw + 1rem, 8rem);
-	--fs-h4: clamp(0.9rem, 1vw + 0.3rem, 6rem);
+	--fs-h4: clamp(1rem, 1vw + 0.3rem, 6rem);
 	--fs-card-title: clamp(1.5rem, 0.8vw + 1rem, 7rem);
 	--fs-text: clamp(1rem, 1vw + 0.3rem, 1.5rem);
 	--fs-text-footer: clamp(0.9rem, 1vw + 0.1rem, 6rem);
@@ -44,5 +44,5 @@ $breakpoints: (
 	// 960px
 	xl: 80em,
 	// 1280px
-	xxl: 90em // 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+	xxl: 90em // 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
