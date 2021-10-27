@@ -1,5 +1,6 @@
 import React from 'react';
 import FooterBackground from '../assets/images/background/heroBackground.jpg';
+import FormInput from './FormInput';
 
 export default function Footer() {
 	return (
@@ -14,37 +15,59 @@ export default function Footer() {
 			}}>
 			<div className='footer__container'>
 				<div className='footer__row'>
-					<h4>Resources</h4>
-					<p>Contact Us</p>
-					<p>Forums</p>
-					<p>Blog</p>
-					<p>Help Center</p>
+					<h4 className='footer__header'>Resources</h4>
+					<p tabIndex='0' className='footer__link'>
+						Contact Us
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Forums
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Blog
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Help Center
+					</p>
 				</div>
 
 				<div className='footer__row'>
-					<h4>Account</h4>
-					<p>My Account</p>
-					<p>Watchlist</p>
-					<p>Collections</p>
-					<p>User Guide</p>
+					<h4 className='footer__header'>Account</h4>
+					<p tabIndex='0' className='footer__link'>
+						My Account
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Watchlist
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Collections
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						User Guide
+					</p>
 				</div>
 
 				<div className='footer__row'>
-					<h4>Legal</h4>
-					<p>Terms of Use</p>
-					<p>Privacy Policy</p>
-					<p>Security</p>
+					<h4 className='footer__header'>Legal</h4>
+					<p tabIndex='0' className='footer__link'>
+						Terms of Use
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Privacy Policy
+					</p>
+					<p tabIndex='0' className='footer__link'>
+						Security
+					</p>
 				</div>
 
 				<div className='footer__row'>
-					<h4>Newsletter</h4>
+					<h4 className='footer__header'>Newsletter</h4>
 					<p>
 						Subscribe to our newsletter system now to get latest news from us
 					</p>
-					<p>ENTER YOUR EMAIL</p>
+					<FormInput className={'form-input'} />
 				</div>
 				<div className='footer__row'>
-					<h4 className='logo'>LOGO</h4>
+					<p className='logo'>LOGO</p>
 					<p>Copyright @ 2021</p>
 					<p>Designed & Developed by Ryuse</p>
 				</div>
