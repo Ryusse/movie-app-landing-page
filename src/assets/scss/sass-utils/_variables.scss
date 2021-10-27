@@ -8,7 +8,8 @@
 	--fw-bold: 700;
 	--fw-extra-bold: 800;
 
-	--red: hsl(343, 100%, 43%);
+	--red-light: hsl(343, 100%, 43%);
+	--red: hsl(343, 71%, 43%);
 	--white: hsl(0, 0%, 100%);
 	--dark-blue: hsl(210, 91%, 4%);
 	--dark-blue-transparent: hsla(210, 90%, 4%, 0.9);
@@ -26,9 +27,9 @@
 	--fs-button: clamp(1rem, 0.4vw + 0.85rem, 5rem);
 }
 //Variables
-$padding-layout-mobile: 5vw;
-$padding-layout-tablet: 8vw;
-$padding-layout-desktop: 10vw;
+$padding-layout-mobile: 4vw;
+$padding-layout-tablet: 6vw;
+$padding-layout-desktop: 6vw;
 $min-width-card: 7rem;
 $max-width-card: 10rem;
 
@@ -44,5 +45,6 @@ $breakpoints: (
 	// 960px
 	xl: 80em,
 	// 1280px
-	xxl: 90em // 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+	xxl: 90em
+		// 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
