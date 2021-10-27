@@ -7,7 +7,7 @@ html {
 body {
 	font-family: var(--nunito);
 	font-weight: var(--fw-regular);
-	line-height: 1.6;
+	line-height: 1.5;
 	text-align: start;
 }
 
@@ -42,6 +42,7 @@ h3 {
 
 h4 {
 	font-size: var(--fs-h4);
+	font-weight: var(--fw-semi-bold);
 }
 
 p {
