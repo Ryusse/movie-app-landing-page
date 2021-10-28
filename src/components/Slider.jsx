@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Button from './Button';
 import SwiperCore, { Parallax, Pagination, Navigation } from 'swiper';
 SwiperCore.use([Parallax, Pagination, Navigation]);
 
@@ -40,11 +41,18 @@ export default function Slider() {
 									</p>
 								</div>
 								<div className='row__categories'>
-									<p className='row__categorie fs-small'>{movie.genre_ids}</p>
+									<p className='row__categorie fs-small'>
+										{movie.release_date}
+									</p>
 								</div>
 							</div>
 
 							<p className='content__overview'>{movie.overview}</p>
+
+							<div className='content__buttons'>
+								<Button className={'button--red'} content={'Watch now'} />
+								<Button className={'button--black'} content={'Add list'} />
+							</div>
 						</div>
 
 						<img
