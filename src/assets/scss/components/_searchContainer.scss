@@ -31,16 +31,14 @@
 	&__box {
 		display: flex;
 		width: 90%;
+		background-color: var(--gray-blue);
 		place-items: center;
 		padding: 0.5rem 1.2rem;
-		background-color: var(--gray-blue);
 		border-radius: 5px;
 		border: 1px solid transparent;
 		transition: all 0.2s ease-in-out;
 
-		&:focus {
-			border: 1px solid var(--red);
-		}
+		&:focus-within,
 		&:hover {
 			border: 1px solid var(--red);
 		}
@@ -68,7 +66,7 @@
 		place-items: center;
 
 		&:hover,
-		&:focus {
+		&:focus-within {
 			& div {
 				background-color: var(--red);
 			}
