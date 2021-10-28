@@ -8,10 +8,12 @@
 	--fw-bold: 700;
 	--fw-extra-bold: 800;
 
-	--red-light: hsl(343, 100%, 43%);
-	--red: hsl(343, 71%, 43%);
+	--red: hsl(343, 100%, 43%);
+	--red-light: hsl(343, 71%, 43%);
 	--white: hsl(0, 0%, 100%);
 	--dark-blue: hsl(210, 91%, 4%);
+	--dark: hsl(0, 0%, 0%);
+	--dark-light: hsl(0, 0%, 5%);
 	--dark-blue-transparent: hsla(210, 90%, 4%, 0.9);
 	--gray-blue: hsl(210, 30%, 9%);
 	--gray-light: hsl(211, 17%, 72%);
@@ -22,9 +24,9 @@
 	--fs-h4: clamp(1rem, 1vw + 0.3rem, 6rem);
 	--fs-card-title: clamp(1.5rem, 0.8vw + 1rem, 7rem);
 	--fs-text: clamp(1rem, 1vw + 0.3rem, 1.5rem);
-	--fs-text-footer: clamp(0.9rem, 1vw + 0.1rem, 6rem);
+	--fs-text-footer: clamp(0.9rem, 0.3vw + 0.1rem, 6rem);
 	--fs-small: clamp(0.8rem, 1vw + 0.2rem, 1.2rem);
-	--fs-button: clamp(1rem, 0.4vw + 0.85rem, 5rem);
+	--fs-button: clamp(0.7rem, 0.9vw + 0.1rem, 1.2rem);
 }
 //Variables
 $padding-layout-mobile: 4vw;
@@ -32,6 +34,7 @@ $padding-layout-tablet: 6vw;
 $padding-layout-desktop: 6vw;
 $min-width-card: 7rem;
 $max-width-card: 10rem;
+$border-radius-button: 5px;
 
 //Maps
 $breakpoints: (
@@ -46,5 +49,5 @@ $breakpoints: (
 	xl: 80em,
 	// 1280px
 	xxl: 90em
-		// 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+		// 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
