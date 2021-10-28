@@ -50,15 +50,6 @@
 		}
 	}
 
-	&__link {
-		cursor: pointer;
-		@include transition(all 0.2s ease-in-out);
-
-		&:focus,
-		&:hover {
-			color: white;
-		}
-	}
 	&__header {
 		position: relative;
 		margin-bottom: 1.7rem;
@@ -73,6 +64,15 @@
 			background-color: var(--red);
 			border-radius: 5px;
 			@include centerer($top: 165%, $left: 50%);
+		}
+	}
+	&__link {
+		cursor: pointer;
+		@include transition(all 0.2s ease-in-out);
+
+		&:focus,
+		&:hover {
+			color: var(--white);
 		}
 	}
 }
