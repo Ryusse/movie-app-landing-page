@@ -30,6 +30,7 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
+		place-items: center;
 		flex-direction: column;
 		gap: 3rem;
 		justify-content: space-between;
@@ -42,19 +43,31 @@
 			display: flex;
 			flex-direction: column;
 			padding: 0;
-			gap: 1.3rem;
+			gap: 1.5rem;
 			margin: 0 $padding-layout-mobile;
 			@include query(md) {
-				margin-left: $padding-layout-tablet;
+				margin: 0 0 0 $padding-layout-tablet;
 				max-width: 50%;
 			}
 
 			@include query(lg) {
-				margin-left: $padding-layout-desktop;
+				margin: 0 0 0 $padding-layout-desktop;
 			}
 
 			&__title {
-				margin-bottom: 1.5rem;
+				height: max(7rem);
+			}
+
+			&__overview {
+				height: 4.5rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			&__buttons {
+				display: flex;
+				column-gap: 2.5rem;
+				margin-top: 1rem;
 			}
 
 			.row {
@@ -63,19 +76,12 @@
 
 				&__rating {
 					display: flex;
-					place-items: center;
-					gap: 1.5rem;
-				}
-
-				&__categories {
-					display: flex;
+					place-self: center;
 					gap: 1rem;
 				}
 
 				&__categorie {
 					position: relative;
-					display: grid;
-					place-items: center;
 					padding-left: 1rem;
 
 					&::before {
@@ -94,15 +100,16 @@
 		}
 
 		&__image {
-			width: 16rem;
+			align-self: center;
+			width: min(15rem);
 			height: auto;
-			margin: 0 $padding-layout-mobile 5rem $padding-layout-mobile;
+			margin: 0 $padding-layout-mobile 3rem $padding-layout-mobile;
 			@include query(md) {
-				margin-right: $padding-layout-tablet;
+				margin: 0 $padding-layout-tablet 0 0;
 			}
 
 			@include query(lg) {
-				margin-right: $padding-layout-desktop;
+				margin: 0 $padding-layout-desktop 0 0;
 			}
 		}
 	}
