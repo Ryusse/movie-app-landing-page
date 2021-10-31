@@ -1,27 +1,27 @@
 {
-	"env": {
-		"browser": true,
-		"es2021": true,
-		"node": true
-	},
-	"extends": [
-		"plugin:react/recommended",
-		"airbnb",
-		"plugin:jsx-ally/recomended",
-		"plugin:react-hooks/recomended",
-		"prettier"
-	],
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": 12,
-		"sourceType": "module"
-	},
-	"plugins": ["react", "react-hooks", "prettier", "jsx-a11y", "import"],
-	"rules": {
-		"indent": ["error", 2],
-		"prettier/prettier": "error",
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-	}
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "standard", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off"
+  }
 }
