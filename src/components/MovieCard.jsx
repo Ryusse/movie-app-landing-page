@@ -1,11 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import placeholder from '../assets/images/image-not-found.jpg'
+import { getMovieImg } from '../utils/getMovieImg'
 
 export default function Moviecard({ movie }) {
-  const imageUrl = movie.poster_path
-    ? 'https://image.tmdb.org/t/p/w300' + movie.poster_path
-    : placeholder
+  const imageUrl = getMovieImg(movie.poster_path, 300)
   return (
     <Link className='card' to={'/movies/' + movie.id}>
       <img src={imageUrl} alt='movie image' className='card__img' />
