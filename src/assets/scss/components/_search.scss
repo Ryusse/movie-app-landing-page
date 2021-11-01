@@ -1,31 +1,6 @@
 @use '../sass-utils/all' as *;
 
-.search-icon{
-  cursor: pointer;
+.search-icon {
   display: grid;
   place-items: center;
 }
-// .search {
-
-//   display: grid;
-//   place-items: center;
-
-//   &__container {
-//     display: flex;
-//     font-size: 1rem;
-//     border-radius: 0.5rem;
-//     border: 0.5px solid #abb7c4;
-//   }
-
-//   &__button,
-//   &__input {
-//     color: white;
-//     padding: 0.7rem 1rem;
-//   }
-
-//   &__button{
-//       border-left: 1px solid #abb7c4;
-//       cursor: pointer;
-//   }
-// }
-
