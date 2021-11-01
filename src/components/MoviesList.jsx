@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { get } from '../utils/httpClient'
 import Spinner from './Spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Empty from './Empty'
 
 export default function Movieslist({ search }) {
   const [movies, setMovies] = useState([])
@@ -21,6 +22,10 @@ export default function Movieslist({ search }) {
       setIsLoading(false)
     })
   }, [search, page])
+
+  if (!isLoading && movies.length === 0) {
+    return <Empty />
+  }
 
   return (
     <InfiniteScroll
