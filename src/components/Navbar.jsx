@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className='navbar'>
       <div className='navbar__item' onClick={handleToggle}>
-        <Toggle open={menuOpen} />
+        <Toggle open={menuOpen} ariaLabel={'Open menu'} />
       </div>
       <Menu open={menuOpen} />
 
@@ -42,7 +42,7 @@ export default function Navbar() {
       <div className='navbar__item'>
         <Search className={'search-icon'} open={handleToggleSearch} />
 
-        <Button className='button--sign-up' content='Sign up' />
+        <Button className='button--sign-up' content='Sign up' tabIndex='3' />
       </div>
       {searchOpen && <SearchContainer close={closeSearch} open={'open'} />}
     </nav>
