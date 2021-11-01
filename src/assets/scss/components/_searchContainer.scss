@@ -1,91 +1,92 @@
 @use '../sass-utils/all' as *;
 
 .search-container {
-	z-index: 4;
-	position: fixed;
-	top: 0;
-	left: $padding-layout-mobile;
-	right: $padding-layout-mobile;
-	display: flex;
-	place-items: center;
-	padding: 1.1rem 0;
-	gap: 1rem;
-	transition: all 0.3s ease-in-out;
-	transform: translate3d(0, -100%, 0);
-	background-color: var(--dark-blue);
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: $padding-layout-mobile;
+  right: $padding-layout-mobile;
+  display: flex;
+  place-items: center;
+  padding: 1.1rem 0;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+  transform: translate3d(0, -100%, 0);
+  background-color: var(--dark-blue);
 
-	@include query(md) {
-		left: $padding-layout-tablet;
-		right: $padding-layout-tablet;
-	}
+  @include query(md) {
+    left: $padding-layout-tablet;
+    right: $padding-layout-tablet;
+  }
 
-	@include query(md) {
-		left: $padding-layout-desktop;
-		right: $padding-layout-desktop;
-	}
+  @include query(md) {
+    left: $padding-layout-desktop;
+    right: $padding-layout-desktop;
+  }
 
-	&.open {
-		transform: translate3d(0, 0, 0);
-	}
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
 
-	&__box {
-		display: flex;
-		width: 90%;
-		background-color: var(--gray-blue);
-		place-items: center;
-		padding: 0.5rem 1.2rem;
-		border-radius: 5px;
-		border: 1px solid transparent;
-		transition: all 0.2s ease-in-out;
+  &__box {
+    display: flex;
+    width: 90%;
+    background-color: var(--gray-blue);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
 
-		&:focus-within,
-		&:hover {
-			border: 1px solid var(--red);
-		}
-	}
+    &:focus-within,
+    &:hover {
+      border: 1px solid var(--red);
+    }
+  }
 
-	&__input {
-		width: 100%;
-		color: var(--white);
+  &__input {
+    width: 100%;
+    color: var(--white);
 
-		&::placeholder {
-			color: var(--gray-light);
-		}
-	}
+    &::placeholder {
+      color: var(--gray-light);
+    }
+  }
 
-	&__search-button {
-		display: flex;
-		place-items: center;
-	}
+  &__search-button {
+    display: flex;
+    place-items: center;
+    cursor: default;
+  }
 
-	&__exit-button {
-		width: 1.3rem;
-		height: 1.3rem;
-		position: relative;
-		display: grid;
-		place-items: center;
+  &__exit-button {
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    display: grid;
+    place-items: center;
 
-		&:hover,
-		&:focus-within {
-			& div {
-				background-color: var(--red);
-			}
-		}
+    &:hover,
+    &:focus-within {
+      & div {
+        background-color: var(--red);
+      }
+    }
 
-		& div {
-			width: 100%;
-			height: 2px;
-			position: absolute;
-			background-color: var(--white);
-			transition: all 0.3s ease-in-out;
+    & div {
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: var(--white);
+      transition: all 0.3s ease-in-out;
 
-			&:nth-child(1) {
-				transform: rotate(45deg);
-			}
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
 
-			&:nth-child(2) {
-				transform: rotate(-45deg);
-			}
-		}
-	}
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
