@@ -6,6 +6,7 @@ import { useParams } from 'react-router'
 import Spinner from '../components/Spinner'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+// import { getMovieImg } from '../utils/getMovieImg'
 
 export default function MovieDetails() {
   const { movieId } = useParams()
@@ -27,7 +28,7 @@ export default function MovieDetails() {
     return null
   }
 
-  // const imageUrl = 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path
+  // const imageUrl = getMovieImg(movie.poster.path, 500)
   return (
     <React.Fragment>
       <Navbar />
