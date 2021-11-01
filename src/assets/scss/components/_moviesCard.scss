@@ -1,38 +1,64 @@
 .card {
-	background: transparent;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto;
-	place-items: center;
-	gap: 0.6rem;
-	grid-template-areas:
-		'image'
-		'title'
-		'date'
-		'button';
-	transition: all 0.2s ease-in-out;
-}
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1fr auto auto;
+  row-gap: 0.8rem;
+  grid-template-areas:
+    'image image image'
+    'title title title'
+    ' date  heart star';
 
-.card:hover {
-	opacity: 0.7;
-}
+  &:hover,
+  &:focus {
+    .card__title {
+      color: var(--red);
+    }
+    .card__cover {
+      background-color: hsla(343, 100%, 43%, 0.35);
+    }
+  }
 
-.card__img {
-	grid-area: image;
-	width: 100%;
-	height: auto;
-}
+  &__img {
+    width: 100%;
+  }
 
-.card__title {
-	grid-area: title;
-	font-weight: 600;
-	margin-top: 1rem;
-	color: var(--white);
-	font-size: var(--fs-card-title);
-}
+  &__img,
+  &__cover {
+    grid-area: image;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    transition: all 0.2s ease-in-out;
+  }
 
-.card__date {
-	grid-area: date;
-	font-size: var(--fs-text);
-	color: var(--gray);
+  &__title {
+    grid-area: title;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__date {
+    grid-area: date;
+    color: var(--gray-light);
+  }
+
+  &__heart {
+    align-self: center;
+    margin-right: 1rem;
+  }
+
+  &__star-container {
+    display: flex;
+    place-self: center;
+    column-gap: 0.6rem;
+  }
+
+  &__star {
+    align-self: center;
+  }
 }
