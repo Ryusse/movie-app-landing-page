@@ -17,45 +17,45 @@ export default function Footer() {
       <div className='footer__container'>
         <div className='footer__row'>
           <h4 className='footer__header'>Resources</h4>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Contact Us
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Forums
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Blog
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Help Center
           </p>
         </div>
 
         <div className='footer__row'>
           <h4 className='footer__header'>Account</h4>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             My Account
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Watchlist
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Collections
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             User Guide
           </p>
         </div>
 
         <div className='footer__row'>
           <h4 className='footer__header'>Legal</h4>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Terms of Use
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Privacy Policy
           </p>
-          <p tabIndex='0' className='footer__link'>
+          <p tabIndex='6' className='footer__link'>
             Security
           </p>
         </div>
