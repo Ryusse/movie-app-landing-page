@@ -21,8 +21,9 @@ export default function SearchContainer(props) {
         <input
           className='search-container__input'
           type='text'
-          value={search}
+          value={search ?? ''}
           placeholder='Search...'
+          aria-label='Search movies'
           onChange={(e) => {
             const value = e.target.value
             history.push('?search=' + value)
