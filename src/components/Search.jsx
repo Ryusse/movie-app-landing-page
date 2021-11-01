@@ -1,6 +1,11 @@
 export default function Search(props) {
   return (
-    <button className={`${props.className}`} onClick={props.open}>
+    <button
+      className={`${props.className}`}
+      onClick={props.open}
+      aria-label='Open browser'
+      tabIndex='2'
+    >
       <svg
         width='18'
         height='18'
