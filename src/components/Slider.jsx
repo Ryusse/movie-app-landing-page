@@ -51,8 +51,18 @@ export default function Slider() {
               <p className='content__overview'>{movie.overview}</p>
 
               <div className='content__buttons'>
-                <Button className={'button--red'} content={'Watch now'} />
-                <Button className={'button--black'} content={'Add list'} />
+                <Button
+                  className={'button--red'}
+                  ariaLabel={'Wacht now'}
+                  content={'Watch now'}
+                  tabIndex={'4'}
+                />
+                <Button
+                  className={'button--black'}
+                  ariaLabel={'Add list'}
+                  content={'Add list'}
+                  tabIndex={'5'}
+                />
               </div>
             </div>
 
