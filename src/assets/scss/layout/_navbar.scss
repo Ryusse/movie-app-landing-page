@@ -1,49 +1,50 @@
 @use '../sass-utils/all' as *;
 
 .navbar {
-	position: sticky;
-	z-index: 4;
-	top: 0;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	place-items: center;
+  position: sticky;
+  z-index: 4;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 
-	padding: 0 $padding-layout-mobile;
-	@include query(md) {
-		padding: 0 $padding-layout-tablet;
-	}
-	@include query(lg) {
-		padding: 0 $padding-layout-desktop;
-	}
-	background-color: var(--dark-blue);
+  padding: 0 $padding-layout-mobile;
+  @include query(md) {
+    padding: 0 $padding-layout-tablet;
+  }
+  @include query(lg) {
+    padding: 0 $padding-layout-desktop;
+  }
+  background-color: var(--dark-blue);
 
-	&__item {
-		display: grid;
-		place-items: center;
+  &__item {
+    display: grid;
+    place-items: center;
 
-		&:nth-child(1) {
-			justify-self: start;
-		}
+    &:nth-child(1) {
+      justify-self: start;
+    }
 
-		&:nth-child(3) {
-			justify-self: center;
-		}
+    &:nth-child(3) {
+      justify-self: center;
+      color: var(--white);
+    }
 
-		&:nth-child(4) {
-			justify-self: end;
-			display: flex;
-			gap: 2rem;
+    &:nth-child(4) {
+      justify-self: end;
+      display: flex;
+      gap: 2rem;
 
-			a {
-				display: none;
-				@include query(md) {
-					display: block;
-				}
-			}
-		}
-	}
+      a {
+        display: none;
+        @include query(md) {
+          display: block;
+        }
+      }
+    }
+  }
 
-	&__link {
-		color: var(--white);
-	}
+  &__link {
+    color: var(--white);
+  }
 }
