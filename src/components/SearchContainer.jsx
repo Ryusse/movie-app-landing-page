@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router'
 import { useQuery } from '../hooks/useQuery'
+
 import ExitButton from './ExitButton'
 import Search from './Search'
 

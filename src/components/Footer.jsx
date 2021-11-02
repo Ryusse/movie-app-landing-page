@@ -1,4 +1,3 @@
-import React from 'react'
 import FooterBackground from '../assets/images/background/heroBackground.jpg'
 import FormInput from './FormInput'
 

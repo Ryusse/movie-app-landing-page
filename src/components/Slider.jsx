@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Button from './Button'
 import SwiperCore, { Parallax, Pagination, Navigation } from 'swiper'
+
+import Button from './Button'
 
 import movies from '../assets/data/movies.json'
 SwiperCore.use([Parallax, Pagination, Navigation])

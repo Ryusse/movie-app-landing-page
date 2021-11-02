@@ -1,8 +1,10 @@
-import React from 'react'
-import MoviesList from '../components/MoviesList'
-import Navbar from '../components/Navbar'
 import { useQuery } from '../hooks/useQuery'
 import { useDebounce } from '../hooks/useDebounce'
+
+import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
+import HeroBackground from '../assets/images/background/hero2Background.jpg'
+import MoviesList from '../components/MoviesList'
 import Footer from '../components/Footer'
 
 export default function Movies() {
@@ -13,8 +15,13 @@ export default function Movies() {
   return (
     <>
       <Navbar />
+      <Hero
+        backgroundImage={HeroBackground}
+        sliderVisible={false}
+        titleVisible={true}
+        title={'MOVIES LIST'}
+      />
       <main className='content'>
-        <h2>All Movies</h2>
         <MoviesList key={debouncedSearch} search={debouncedSearch} />
       </main>
       <Footer />
