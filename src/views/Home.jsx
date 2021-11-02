@@ -1,17 +1,21 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
+import Footer from '../components/Footer'
+import HeroBackground from '../assets/images/background/heroBackground.jpg'
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
-      <Hero />
+      <Hero
+        backgroundImage={HeroBackground}
+        sliderVisible={true}
+        titleVisible={false}
+      />
       <main className='content'>
         <h2 className='content__h2'>TRENDS NOW</h2>
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
