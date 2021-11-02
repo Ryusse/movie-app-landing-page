@@ -4,14 +4,14 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
+    auto-fill,
     minmax(min(100%, $min-width-card), 1fr)
   );
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: 3rem 1rem;
   @include query(xs) {
     grid-template-columns: repeat(
-      auto-fit,
+      auto-fill,
       minmax(min(100%, $max-width-card), 1fr)
     );
     gap: 3rem 2rem;
