@@ -1,19 +1,19 @@
 import Slider from './Slider'
-import HeroBackground from '../assets/images/background/heroBackground.jpg'
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div
       className='hero'
       style={{
-        backgroundImage: `url(${HeroBackground})`,
+        backgroundImage: `url(${props.backgroundImage})`,
         backgroundPosition: 'center ',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         imageRendering: 'auto'
       }}
     >
-      <Slider />
+      {props.titleVisible && <h2 className='hero__title'>{props.title}</h2>}
+      {props.sliderVisible && <Slider />}
     </div>
   )
 }
