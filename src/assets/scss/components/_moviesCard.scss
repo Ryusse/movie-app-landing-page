@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-template-rows: 1fr auto auto;
-  row-gap: 0.8rem;
+  row-gap: 0.7rem;
   grid-template-areas:
     'image image image'
     'title title title'
@@ -28,7 +28,7 @@
   &__cover {
     grid-area: image;
     border-radius: 12px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     transition: all 0.2s ease-in-out;
   }
 
