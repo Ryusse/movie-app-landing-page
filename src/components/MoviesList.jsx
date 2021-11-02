@@ -1,7 +1,8 @@
-import Moviecard from './MovieCard'
 import { useState, useEffect } from 'react'
 import { get } from '../utils/httpClient'
+
 import Spinner from './Spinner'
+import Moviecard from './MovieCard'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Empty from './Empty'
 
