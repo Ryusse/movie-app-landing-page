@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-
+import { useState, useEffect } from 'react'
 import { get } from '../utils/httpClient'
 import { useParams } from 'react-router'
 
@@ -30,12 +29,12 @@ export default function MovieDetails() {
 
   // const imageUrl = getMovieImg(movie.poster.path, 500)
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <main className='content'>
         <h2>Movie details ...</h2>
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   )
 }
