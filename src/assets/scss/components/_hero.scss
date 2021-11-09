@@ -10,8 +10,17 @@
     @include query(md) {
       margin: 0 $padding-layout-tablet;
     }
+
     @include query(lg) {
       margin: 0 $padding-layout-desktop;
+    }
+
+    @include query(xl) {
+      padding: 0 $padding-layout-desktop-xl;
+    }
+
+    @include query(xxl) {
+      padding: 0 $padding-layout-desktop-xxl;
     }
   }
 }

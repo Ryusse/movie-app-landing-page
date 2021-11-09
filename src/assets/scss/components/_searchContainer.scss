@@ -3,11 +3,13 @@
 .search-container {
   z-index: 4;
   position: fixed;
+
   top: 0;
   left: $padding-layout-mobile;
   right: $padding-layout-mobile;
   display: flex;
   place-items: center;
+  justify-content: space-between;
   padding: 1.1rem 0;
   gap: 1rem;
   transition: all 0.3s ease-in-out;
@@ -19,9 +21,19 @@
     right: $padding-layout-tablet;
   }
 
-  @include query(md) {
+  @include query(lg) {
     left: $padding-layout-desktop;
     right: $padding-layout-desktop;
+  }
+
+  @include query(xl) {
+    left: $padding-layout-desktop-xl;
+    right: $padding-layout-desktop-xl;
+  }
+
+  @include query(xxl) {
+    left: $padding-layout-desktop-xxl;
+    right: $padding-layout-desktop-xxl;
   }
 
   &.open {
@@ -30,7 +42,7 @@
 
   &__box {
     display: flex;
-    width: 90%;
+    width: 95%;
     background-color: var(--gray-blue);
     padding: 0.5rem 1.2rem;
     border-radius: 5px;

@@ -1,25 +1,34 @@
 @use '../sass-utils/all' as *;
 
 .navbar {
+  background-color: var(--dark-blue);
   position: sticky;
   z-index: 4;
   top: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   place-items: center;
-
   padding: 0 $padding-layout-mobile;
+
   @include query(md) {
     padding: 0 $padding-layout-tablet;
   }
   @include query(lg) {
     padding: 0 $padding-layout-desktop;
   }
-  background-color: var(--dark-blue);
+
+  @include query(xl) {
+    padding: 0 $padding-layout-desktop-xl;
+  }
+
+  @include query(xxl) {
+    padding: 0 $padding-layout-desktop-xxl;
+  }
 
   &__item {
-    display: grid;
+    display: flex;
     place-items: center;
+    gap: 4rem;
 
     &:nth-child(1) {
       justify-self: start;
