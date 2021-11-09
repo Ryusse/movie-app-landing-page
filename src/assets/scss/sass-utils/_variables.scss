@@ -18,35 +18,36 @@
   --gray-blue: hsl(210, 30%, 9%);
   --gray-light: hsl(211, 17%, 72%);
 
-  --fs-h1: clamp(2.4rem, 2.8vw + 1rem, 20rem);
-  --fs-h2: clamp(1.5rem, 1.5vw + 1rem, 14rem);
-  --fs-h3: clamp(1.5rem, 1vw + 1rem, 8rem);
-  --fs-h4: clamp(1rem, 1vw + 0.3rem, 6rem);
-  --fs-card-title: clamp(1rem, 1vw + 0.4rem, 6rem);
+  --fs-h1: clamp(2.4rem, 1vw + 2rem, 8rem);
+  --fs-h2: clamp(1.5rem, 1vw + 1rem, 3rem);
+  --fs-h3: clamp(1.5rem, 1vw + 1rem, 2rem);
+  --fs-h4: clamp(1rem, 1vw + 0.3rem, 1.8rem);
+  --fs-card-title: clamp(1rem, 1vw + 0.4rem, 1.8rem);
   --fs-text: clamp(1rem, 1vw + 0.3rem, 1.5rem);
-  --fs-text-small: clamp(0.9rem, 0.3vw + 0.1rem, 6rem);
+  --fs-text-small: clamp(0.9rem, 0.3vw + 0.1rem, 1.2rem);
   --fs-button: clamp(0.7rem, 0.9vw + 0.1rem, 1.2rem);
 }
 //Variables
 $padding-layout-mobile: 4vw;
-$padding-layout-tablet: 6vw;
-$padding-layout-desktop: 6vw;
-$min-width-card: 7rem;
-$max-width-card: 10rem;
+$padding-layout-tablet: 4vw;
+$padding-layout-desktop: 5vw;
+$padding-layout-desktop-xl: 5vw;
+$padding-layout-desktop-xxl: 8vw;
+
 $border-radius-button: 5px;
 
 //Maps
 $breakpoints: (
-  xs: 25em,
   // 400px
-  ms: 34em,
+  xs: 25em,
   // 544px
-  md: 48em,
+  ms: 34em,
   // 768px
-  lg: 60em,
+  md: 48em,
   // 960px
-  xl: 80em,
+  lg: 60em,
   // 1280px
+  xl: 80em,
+  // 1440px
   xxl: 90em
-    // 1440px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
