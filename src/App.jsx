@@ -7,24 +7,25 @@ import Series from './views/Series'
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-
-        <Route exact path='/movies/:movieId'>
-          <MovieDetails />
-        </Route>
-        <Route path='/movies'>
-          <Movies />
-        </Route>
-        <Route path='/series'>
-          <Series />
-        </Route>
-        <Route path='/'>404</Route>
-      </Switch>
-    </Router>
+    <div className='layout'>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/movies'>
+            <Movies />
+          </Route>
+          <Route exact path='/movies/:movieId'>
+            <MovieDetails />
+          </Route>
+          <Route path='/series'>
+            <Series />
+          </Route>
+          <Route path='/'>404</Route>
+        </Switch>
+      </Router>
+    </div>
   )
 }
 
