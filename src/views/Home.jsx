@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import HeroBackground from '../assets/images/background/heroBackground.jpg'
+import SliderHome from '../components/SliderHome'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       />
       <main className='content'>
         <h2 className='content__h2'>TRENDS NOW</h2>
+
+        <SliderHome />
       </main>
       <Footer />
     </>
