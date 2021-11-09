@@ -6,10 +6,12 @@ import Toggle from './Toggle'
 import Button from './Button'
 import Search from './Search'
 import SearchContainer from './SearchContainer'
+import { useGetWidth } from '../hooks/useGetWidth'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(0)
 
   const handleToggle = () => {
     function toggleMenu(prevMenuOpen) {
@@ -27,12 +29,18 @@ export default function Navbar() {
     setSearchOpen(false)
   }
 
+  useGetWidth(setWindowWidth)
+
   return (
     <nav className='navbar'>
       <div className='navbar__item' onClick={handleToggle}>
-        <Toggle open={menuOpen} ariaLabel={'Open menu'} />
+        {windowWidth < 960 ? (
+          <Toggle open={menuOpen} ariaLabel={'Open menu'} />
+        ) : (
+          !menuOpen
+        )}
+        {windowWidth < 960 ? <Menu open={menuOpen} /> : !menuOpen}
       </div>
-      <Menu open={menuOpen} />
 
       <div className='navbar__item'>
         <Link className='navbar__link' to='/'>
