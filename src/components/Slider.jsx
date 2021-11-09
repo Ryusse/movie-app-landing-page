@@ -15,7 +15,7 @@ export default function Slider() {
         clickable: true
       }}
       navigation={true}
-      className='swiper'
+      className='slider'
     >
       {movies.slice(0, 3).map((movie) => (
         <SwiperSlide key={movie.id} className='swiper__slide'>
