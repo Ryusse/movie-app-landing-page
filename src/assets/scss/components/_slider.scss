@@ -3,11 +3,7 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
-.parallax-bg,
-.swiper-button-next,
-.swiper-button-prev,
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.parallax-bg {
   display: none;
 }
 

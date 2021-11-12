@@ -1,7 +1,7 @@
 
-### **Screenshot**
 
-![](./screenshots/screenshot-dektop.jpg)
+
+# **Title**
 
 ### **Links**
 
@@ -10,6 +10,11 @@
 ### **Built with**
 
 - React js
-- CSS custom properties
-- CSS Grid
+- Sass
+- Flexbox
+- Grid
 - Mobile-first workflow
+
+### **Screenshot**
+
+![](./screenshots/screenshot-dektop.jpg)

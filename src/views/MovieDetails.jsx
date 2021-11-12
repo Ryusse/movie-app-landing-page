@@ -3,7 +3,7 @@ import { get } from '../utils/httpClient'
 import { useParams } from 'react-router'
 
 import Spinner from '../components/Spinner'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 // import { getMovieImg } from '../utils/getMovieImg'
 
@@ -30,7 +30,7 @@ export default function MovieDetails() {
   // const imageUrl = getMovieImg(movie.poster.path, 500)
   return (
     <>
-      <Navbar />
+      <Header />
       <main className='content'>
         <h2>Movie details ...</h2>
       </main>

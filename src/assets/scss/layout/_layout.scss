@@ -8,9 +8,9 @@
   place-self: center;
   display: grid;
   grid-template-columns: $padding-layout-mobile auto $padding-layout-mobile;
-  grid-template-rows: 4.5rem 1fr auto auto;
+  grid-template-rows: 7vh 1fr auto auto;
   grid-template-areas:
-    ' navbar   navbar   navbar '
+    ' header   header   header '
     '  hero     hero     hero  '
     '    .     content    .    '
     '  footer  footer   footer ';
@@ -32,8 +32,8 @@
   }
 }
 
-.navbar {
-  grid-area: navbar;
+.header {
+  grid-area: header;
 }
 
 .hero {

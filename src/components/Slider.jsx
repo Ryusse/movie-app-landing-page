@@ -14,7 +14,7 @@ export default function Slider() {
       pagination={{
         clickable: true
       }}
-      navigation={true}
+      navigation={false}
       className='slider'
     >
       {movies.slice(0, 3).map((movie) => (

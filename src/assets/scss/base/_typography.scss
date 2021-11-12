@@ -48,6 +48,11 @@ p {
   font-size: var(--fs-text);
 }
 
+.button,
+.navbar__link {
+  font-size: var(--fs-button);
+}
+
 .fs-small {
   font-size: var(--fs-text-small);
 }

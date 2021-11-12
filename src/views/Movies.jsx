@@ -1,7 +1,7 @@
 import { useQuery } from '../hooks/useQuery'
 import { useDebounce } from '../hooks/useDebounce'
 
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Hero from '../components/Hero'
 import HeroBackground from '../assets/images/background/hero2Background.jpg'
 import MoviesList from '../components/MoviesList'
@@ -14,7 +14,7 @@ export default function Movies() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <Hero
         backgroundImage={HeroBackground}
         sliderVisible={false}

@@ -29,7 +29,6 @@ export default function SliderHome() {
           loop={true}
           loopFillGroupWithBlank={true}
           navigation={true}
-          pagination={true}
           className='swiper-home'
         >
           {movies.slice(0, 16).map((movie, key) => (

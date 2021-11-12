@@ -1,39 +1,33 @@
 @use '../sass-utils/all' as *;
 
 .button {
-	text-align: center;
-	padding: 14px 24px;
-	border-radius: $border-radius-button;
-	color: var(--white);
-	transition: all 0.3s ease-in-out;
-	text-transform: uppercase;
-	font-size: var(--fs-button);
-	font-weight: var(--fw-semi-bold);
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  text-align: center;
+  border-radius: var(--border-radius-button);
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+  font-weight: var(--fw-semi-bold);
 
-	&--red {
-		color: var(--white);
-		background-color: var(--red);
-		&:hover {
-			background-color: var(--red-light);
-		}
-	}
+  @include query(xxxl) {
+    padding: 0.7rem 2rem;
+    border-radius: var(--border-radius-button-xxl);
+  }
 
-	&--black {
-		padding: 14px 35px;
-		background-color: var(--dark);
-		&:hover,
-		&:focus {
-			background-color: var(--dark-light);
-		}
-	}
+  &--red {
+    color: var(--white);
+    background-color: var(--red);
+    &:hover,
+    &:focus {
+      background-color: var(--red-light);
+    }
+  }
 
-	&--sign-up {
-		padding: 10px 24px;
-		border: 1px solid var(--red);
-		&:hover,
-		&:focus {
-			background-color: var(--red-light);
-			border: 1px solid var(--red-light);
-		}
-	}
+  &--black {
+    background-color: var(--dark);
+    &:hover,
+    &:focus {
+      background-color: var(--dark-light);
+    }
+  }
 }

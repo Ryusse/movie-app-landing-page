@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import HeroBackground from '../assets/images/background/heroBackground.jpg'
@@ -7,7 +7,7 @@ import SliderHome from '../components/SliderHome'
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Hero
         backgroundImage={HeroBackground}
         sliderVisible={true}

@@ -1,4 +1,5 @@
-import { BrowserRouter as Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Route, Link } from 'react-router-dom'
+import Button from './Button'
 
 export default function Menu(props) {
   return (
@@ -20,7 +21,8 @@ export default function Menu(props) {
           </Link>
         </li>
         <li className='menu__item'>
-          My list <i className='fas fa-chevron-down'></i>
+          <Button className='button--black' content='Sign in' tabIndex='3' />
+          <Button className='button--red' content='Sign up' tabIndex='3' />
         </li>
       </ul>
     </div>

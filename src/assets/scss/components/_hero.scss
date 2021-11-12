@@ -16,11 +16,11 @@
     }
 
     @include query(xl) {
-      padding: 0 $padding-layout-desktop-xl;
+      margin: 0 $padding-layout-desktop-xl;
     }
 
     @include query(xxl) {
-      padding: 0 $padding-layout-desktop-xxl;
+      margin: 0 $padding-layout-desktop-xxl;
     }
   }
 }

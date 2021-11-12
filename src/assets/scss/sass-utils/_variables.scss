@@ -25,7 +25,10 @@
   --fs-card-title: clamp(1rem, 1vw + 0.4rem, 1.8rem);
   --fs-text: clamp(1rem, 1vw + 0.3rem, 1.5rem);
   --fs-text-small: clamp(0.9rem, 0.3vw + 0.1rem, 1.2rem);
-  --fs-button: clamp(0.7rem, 0.9vw + 0.1rem, 1.2rem);
+  --fs-button: clamp(0.8rem, 0.9vw + 0.1rem, 1.8rem);
+
+  --border-radius-button: 5px;
+  --border-radius-button-xxl: 8px;
 }
 //Variables
 $padding-layout-mobile: 4vw;
@@ -33,8 +36,6 @@ $padding-layout-tablet: 4vw;
 $padding-layout-desktop: 5vw;
 $padding-layout-desktop-xl: 5vw;
 $padding-layout-desktop-xxl: 8vw;
-
-$border-radius-button: 5px;
 
 //Maps
 $breakpoints: (

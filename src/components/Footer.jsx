@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className='footer__row'>
           <h4 className='footer__header'>Newsletter</h4>
-          <p>
+          <p className='fs-small'>
             Subscribe to our newsletter system now to get latest news from us
           </p>
           <FormInput className={'form-input'} />
