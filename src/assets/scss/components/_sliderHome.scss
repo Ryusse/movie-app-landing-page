@@ -1,5 +1,9 @@
 @use '../sass-utils/all' as *;
 
+.swiper {
+  margin: 0;
+}
+
 .slider-home-container {
   display: grid;
   place-content: center;
